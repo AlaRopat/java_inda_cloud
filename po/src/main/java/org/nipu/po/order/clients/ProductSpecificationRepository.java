@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author Nikita_Puzankov
  */
-@FeignClient(name = "catalog", configuration = FeignConfiguration.class)
+@FeignClient(name = "catalog",configuration = FeignConfiguration.class)
 public interface ProductSpecificationRepository {
 
     @RequestMapping(method = RequestMethod.GET, path = "/catalog/{specificationId}")

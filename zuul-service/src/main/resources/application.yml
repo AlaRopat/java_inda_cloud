@@ -11,3 +11,23 @@ server:
 spring:
   application:
     name: zuul-service
+
+zuul:
+  routes:
+    catalog:
+      path: /catalog/*
+      stripPrefix: false
+    order:
+      path: /**/order
+      stripPrefix: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, routes, filters
+  endpoint:
+    routes:
+      enabled: true
+    filters:
+      enabled: true
+
