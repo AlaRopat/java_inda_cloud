@@ -5,6 +5,11 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+    - "9411:9411"
 networks:
     default:
         driver: bridge
